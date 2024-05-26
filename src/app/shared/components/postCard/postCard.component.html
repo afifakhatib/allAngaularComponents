@@ -1,0 +1,29 @@
+
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 mb-4"
+        *ngFor="let post of postCard"
+        >
+         <div class="card">
+                <div class="card-heaidng bg-primary text-white p-3">
+                    <h4 class="title">{{post.title}}</h4>
+                </div>
+                <div class="card-body">
+                    <p class="para">
+                       {{post.body}}
+                    </p>
+                </div>
+                <div class="card-footer">
+                  <div class="id d-inline">
+                    <button class="btn btn-warning">ID:{{post.id}}</button>
+                    </div>
+                    <div class="userId d-inline ml-4">
+                    <button class="btn btn-danger">userId:{{post.userId}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

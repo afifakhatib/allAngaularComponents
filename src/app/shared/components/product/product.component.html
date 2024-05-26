@@ -1,0 +1,35 @@
+
+<p  class="text-white">
+    The product name is 
+    <strong>{{productName}}</strong> 
+    and product id is 
+    <strong>{{productId}}</strong>
+</p>
+
+<ul class="list-group mb-4">
+    <li class="list-group-item"
+    *ngFor="let skill of skills"
+    >
+    I Love {{skill}}
+    </li>
+</ul>
+
+<table class="table table-dark table-responsive">
+    <thead>
+        <tr>
+            <th>sr no.</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>NickName</th>
+            <th>Number</th>
+        </tr>
+        <tr
+        *ngFor="let player of players;let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{player.fname}}</td>
+            <td>{{player.lname}}</td>
+            <td>{{player.nickname}}</td>
+            <td>{{player.number}}</td>
+        </tr>
+    </thead>
+</table>

@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-left text-white">
+            
+
+<!-- data binding  -->
+<!-- string interpolation -->
+<h4>string interpolation</h4>
+
+<p class="para">The product name is <strong>{{productNAME}}</strong>
+    and the product id is <strong>{{productId}}</strong>
+</p>
+
+<hr>
+<!-- property binding -->
+
+<h4 class="mb-4">PROPERTY BINDING </h4>
+
+<div [innerHTML]="product" class="bg-success text-white p-2 m-4">
+
+</div>
+
+<input type="text" [value]="val" class="form-control m-4">
+
+<hr>
+<!-- event binding -->
+<h4 class="mb-4">EVENT BINDING</h4>
+
+<input type="text" class="form-control" (keyup)="onkeyUp($event)">
+<hr>
+
+
+<!-- form to add products -->
+
+<h4>form to add product</h4>
+
+<input type="text" class="form-control m-4" #productName placeholder="productName">
+
+<button class="btn btn-primary m-4" (click)="onProductAdd(productName)" [disabled]="productCount == 15">Add product</button>
+
+<button class="btn btn-primary m-4" (click)="onProductRemove()" [disabled]="productCount == 0">Remove product</button>
+
+<br>
+
+<p class="alert alert-info" *ngIf="getproductName ; else noProduct">
+   {{getproductName}} Proudct is addedd!!!
+</p>
+
+
+<!-- <p class="alert alert-info" *ngIf="!getproductName ; else noProduct">
+    NO Proudct is addedd!!!
+ </p> -->
+
+<p class="alert alert-success" *ngIf="productCount ; else noProduct">
+    {{productCount}} Proudct is addedd!!!
+ </p>
+
+<ng-template #noProduct>
+    <p class="alert alert-warning">NO PRODUCT IS ADDED YET!!!</p>
+</ng-template>
+
+
+
+
+        </div>
+    </div>
+</div>

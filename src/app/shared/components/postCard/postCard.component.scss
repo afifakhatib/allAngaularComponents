@@ -1,0 +1,20 @@
+
+.title{
+    height:32px;
+    overflow: hidden;
+}
+
+.title h4{
+    text-overflow: ellipsis;
+    text-wrap: nowarp;
+}
+
+.para{
+    overflow: hidden;
+    height: 42px;
+}
+
+.para p{
+    text-overflow: ellipsis;
+    text-wrap: nowarp;
+}
